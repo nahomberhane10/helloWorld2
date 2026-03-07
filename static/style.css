@@ -1,0 +1,40 @@
+/* This styles all paragraph text on the page */
+p {
+    font-family: Arial, sans-serif;
+    color: black;
+    line-height: 1.6;
+}
+
+h2 {
+    color: darkred;
+    margin-top: 20px;
+}
+
+/* Class rule used for section headers */
+.section-header {
+    text-decoration: underline;
+}
+
+/* Table styling */
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* ID selector used for the third paragraph */
+#third {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+/* Logo image styling */
+img.logo {
+    width: 300px;
+    height: 100px;
+}
