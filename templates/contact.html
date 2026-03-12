@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+{% block content %}
+
+<h2>Contact Form</h2>
+
+{% if submitted %}
+
+<div class="alert">
+    <h4>Thank you for completing my form!</h4>
+</div>
+
+<p><strong>First Name:</strong> {{ first_name }}</p>
+<p><strong>Last Name:</strong> {{ last_name }}</p>
+<p><strong>Email:</strong> {{ email }}</p>
+<p><strong>Message:</strong> {{ message }}</p>
+
+{% else %}
+
+<form class="row g-3" method="POST">
+
+<div class="col-md-6">
+<label class="form-label">First Name</label>
+<input type="text" name="first_name" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Last Name</label>
+<input type="text" name="last_name" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Email Address</label>
+<input type="email" name="email" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Message</label>
+<textarea name="message" class="form-control"></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">
+Submit
+</button>
+
+</form>
+{% endif %}
+{% endblock %}
